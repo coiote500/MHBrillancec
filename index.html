@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MH Brillance | Semi Joias de Luxo</title>
+    <meta name="description"
+        content="Descubra a elegância das semi joias MH Brillance. Coleções exclusivas de anéis, colares e brincos com acabamento premium.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="grain-overlay"></div>
+    <!-- Top Bar / Promo -->
+    <div class="top-promo">
+        Frete Grátis em compras acima de R$ 499,00
+    </div>
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <div class="container">
+            <div class="logo">MH BRILLANCE</div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li class="mobile-only"><span class="menu-label">Categorias</span></li>
+                <li class="mobile-only"><a href="#products" onclick="filterProducts('anel')">Anéis</a></li>
+                <li class="mobile-only"><a href="#products" onclick="filterProducts('colar')">Colares</a></li>
+                <li class="mobile-only"><a href="#products" onclick="filterProducts('brinco')">Brincos</a></li>
+                <li class="divider mobile-only"></li>
+                <li><a href="#products">Coleções</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <div class="nav-icons">
+                <div class="cart-icon" id="cart-btn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <img src="assets/hero.png" alt="MH Brillance Hero" class="hero-bg">
+        <div class="hero-content container">
+            <h1 class="reveal">Onde o Brilho Encontra sua Alma.</h1>
+            <p class="reveal">Design exclusivo e metais nobres para mulheres que não aceitam o comum.</p>
+            <a href="#products" class="btn btn-primary reveal">Explorar Coleções</a>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories container">
+        <div class="category-card reveal">
+            <div class="cat-img"><img src="assets/ring_eternal.png" alt="Anéis"></div>
+            <h3>Anéis</h3>
+        </div>
+        <div class="category-card reveal">
+            <div class="cat-img"><img src="assets/necklace_aura.png" alt="Colares"></div>
+            <h3>Colares</h3>
+        </div>
+        <div class="category-card reveal">
+            <div class="cat-img"><img src="assets/earrings_starlight.png" alt="Brincos"></div>
+            <h3>Brincos</h3>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products container">
+        <div class="section-header">
+            <h2 class="reveal">Destaques da Semana</h2>
+            <div class="filter-btns reveal">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="anel">Anéis</button>
+                <button class="filter-btn" data-filter="colar">Colares</button>
+                <button class="filter-btn" data-filter="brinco">Brincos</button>
+            </div>
+        </div>
+        <div class="product-grid" id="product-grid">
+            <!-- Products will be injected by JS -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container grid-2">
+            <div class="about-img reveal">
+                <img src="assets/bracelet_luna.png" alt="Nossa História">
+            </div>
+            <div class="about-text reveal">
+                <span>Nossa Identidade</span>
+                <h2>Joalheria Contemporânea com Alma Brasileira.</h2>
+                <p>A MH Brillance não faz apenas semi joias. Nós eternizamos momentos em peças minimalistas e
+                    sofisticadas, criadas para acompanhar a mulher moderna em sua jornada diária.</p>
+                <p>Cada detalhe, do banho de ouro 18k à cravação manual, é pensado para oferecer uma experiência de luxo
+                    acessível e autêntica.</p>
+                <a href="#" class="btn btn-outline">Nossa História</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter reveal">
+        <div class="container">
+            <h2>Fique por dentro das novidades</h2>
+            <p>Assine nossa newsletter e receba ofertas exclusivas e lançamentos em primeira mão.</p>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Seu melhor e-mail" required>
+                <button type="submit" class="btn btn-primary">Inscrever</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <div class="logo">MH BRILLANCE</div>
+                <p>Semi joias de luxo para mulheres extraordinárias.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/mhbrillance?igsh=MThvb2VyMjFvMGliaA==" target="_blank"><i
+                            class="fa-brands fa-instagram"></i> @mhbrillance</a>
+                    <a href="https://wa.me/5591986323585" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Newsletter</h4>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#products">Coleções</a></li>
+                    <li><a href="#about">Sobre nós</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Belém-PA</p>
+                <p><i class="fa-solid fa-phone"></i> (91) 9 8632-3585</p>
+                <p><i class="fa-solid fa-envelope"></i> contato@mhbrillance.com.br</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MH Brillance. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Sua Sacola</h3>
+                <span class="close-cart">&times;</span>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be injected by JS -->
+            </div>
+
+            <!-- Shipping Calculator -->
+            <div class="cart-shipping">
+                <h4>Calcular Frete</h4>
+                <div class="shipping-input">
+                    <input type="text" id="cep-input" placeholder="00000-000" maxlength="9">
+                    <button id="calc-shipping-btn">Calcular</button>
+                </div>
+                <div id="shipping-results" class="shipping-results">
+                    <!-- Results will be injected by JS -->
+                </div>
+            </div>
+
+            <div class="cart-footer">
+                <div class="total">
+                    <span>Total:</span>
+                    <span id="cart-total">R$ 0,00</span>
+                </div>
+                <button class="btn btn-primary btn-block" id="checkout-btn">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Details Modal -->
+    <div class="product-modal" id="product-modal">
+        <div class="p-modal-content">
+            <span class="close-p-modal">&times;</span>
+            <div class="p-modal-grid">
+                <div class="p-modal-img">
+                    <img id="modal-img" src="" alt="">
+                </div>
+                <div class="p-modal-info">
+                    <span id="modal-cat" class="modal-cat"></span>
+                    <h2 id="modal-name"></h2>
+                    <p class="modal-price" id="modal-price"></p>
+                    <p class="modal-desc">Peça exclusiva em banho de ouro 18k com tecnologia antialérgica. Garantia de 1
+                        ano no banho e cravação.</p>
+                    <div class="modal-actions">
+                        <button class="btn btn-primary" id="modal-add-btn">Adicionar à Sacola</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
